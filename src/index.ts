@@ -8,15 +8,25 @@ interface IUsersJob {
  gender: string
 }
 
+function getUsersJobPositions(usersArray: IUser[]): IUsersJob[] {
+  return usersArray.map (item => {const newArray = usersInfoArray.find(item1 => item1.userid === item.userid);
+  return {
+    name: item.name,
+    position: newArray ?  newArray.organization.position : '',
+    age: newArray ? newArray.age : 0,
+    gender: item.gender}
+  });
+}
 
-function getUsersJobPositions(usersArray: IUser[]) {const newArray = usersArray
-  .map((item, index) => ({...item, ...usersInfoArray[index]}))
-  .map((item) => ({name: item.name, position: item.organization.position,
-   age: item.age, gender: item.gender}));
 
-   return newArray;
+//function getUsersJobPositions(usersArray: IUser[]) {const newArray = usersArray
+//  .map((item, index) => ({...item, ...usersInfoArray[index]}))
+//  .map((item) => ({name: item.name, position: item.organization.position,
+//   age: item.age, gender: item.gender}));
+
+//   return newArray;
   
-  }
+//  }
 
 // interface IForArr3 {userid: string;
 //     name: string;
