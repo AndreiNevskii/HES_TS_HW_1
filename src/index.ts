@@ -19,7 +19,7 @@ function getUsersJobPositions(usersArray: IUser[]): IUsersJob[] {
 }
 
 
-//function getUsersJobPositions(usersArray: IUser[]) {const newArray = usersArray
+// function getUsersJobPositions(usersArray: IUser[]) {const newArray = usersArray
 //  .map((item, index) => ({...item, ...usersInfoArray[index]}))
 //  .map((item) => ({name: item.name, position: item.organization.position,
 //   age: item.age, gender: item.gender}));
